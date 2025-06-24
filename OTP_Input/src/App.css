@@ -1,0 +1,22 @@
+.App{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.otp-input{
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    text-align: center;
+    border: 3px solid #cccc;
+    border-radius: 12px;
+    margin: 2px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+.otp-input:focus {
+  border-color: #4f46e5; /* Indigo-600 */
+  box-shadow: 0 0 0 1px rgba(99,102,241,0.2); /* Soft glow */
+  background-color: #fff;
+}
