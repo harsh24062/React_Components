@@ -12,10 +12,11 @@ function App() {
    console.log(value)
    if(isNaN(value))return
    const newArr=[...inputArray]
-   newArr[index]=value.slice(-1)
+   const newValue = value.trim()
+   newArr[index]=newValue.slice(-1)
    setInputArray(newArr)
 
-   if(value && index<OTP_DIGITS_COUNT-1){
+   if(newValue && index<OTP_DIGITS_COUNT-1){
    refArr.current[index+1]?.focus()
    }
   }
