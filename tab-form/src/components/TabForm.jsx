@@ -7,6 +7,8 @@ const TabForm = () => {
 
   const [activeTab,setActiveTab] = useState(0)
 
+  const [data,setData] = useState({name:"Harsh",age:18,email:"harsh@gmail.com"})
+
   const tabs  = [
   {
     name:"Profile",
@@ -31,7 +33,7 @@ const TabForm = () => {
         className="heading" key={index}>{tab.name}</div>)}  
         </div>
         <div className="tab-body">
-          <ActiveTabComponent />
+          <ActiveTabComponent data={data} setData={setData}/>
         </div>
     </div>
 }
