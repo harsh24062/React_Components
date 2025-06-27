@@ -7,7 +7,13 @@ const TabForm = () => {
 
   const [activeTab,setActiveTab] = useState(0)
 
-  const [data,setData] = useState({name:"Harsh",age:18,email:"harsh@gmail.com"})
+  const [data,setData] = useState({
+    name:"Harsh",
+    age:18,
+    email:"harsh@gmail.com",
+    interests:["coding","cricket"],
+    theme:"dark"
+  })
 
   const tabs  = [
   {
