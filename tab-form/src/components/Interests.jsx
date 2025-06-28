@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-const Interests = ({data,setData}) => {
+const Interests = ({data,setData,errors}) => {
 
   const {interests} = data
 

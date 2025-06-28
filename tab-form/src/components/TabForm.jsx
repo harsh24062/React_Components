@@ -6,6 +6,7 @@ import Settings from "./Settings"
 const TabForm = () => {
 
   const [activeTab,setActiveTab] = useState(0)
+  const [errors,setErrors] = useState({})
 
   const [data,setData] = useState({
     name:"Harsh",
@@ -18,29 +19,55 @@ const TabForm = () => {
   const tabs  = [
   {
     name:"Profile",
-    component:Profile
+    component:Profile,
+    validate:()=>{
+      const err = {}
+      if(!data.name || data.name.length<2){
+        err.name="Name is not Valid"
+      }
+      if(!data.age || data.age<18){
+        err.age="Age is not Valid"
+      }
+      if(!data.email || !data.email.endsWith("@gmail.com")){
+        err.email="Email is not Valid"
+      }
+      setErrors(err)
+
+      return (err.name || err.age || err.email)?false:true
+    }
   },
   {
     name:"Interests",
-    component:Interests
+    component:Interests,
+    validate:()=>{
+      return true
+    }
   },
   {
     name:"Settings",
-    component:Settings
+    component:Settings,
+    validate:()=>{
+      return true
+    }
   },
 ]
 
   const ActiveTabComponent = tabs[activeTab].component
 
   const handleNextClick = () =>{
+    if(tabs[activeTab].validate()){
     setActiveTab(prev => prev+1)
+    }
   }
 
   const handlePreviousClick = () =>{
+  if(tabs[activeTab].validate()){
    setActiveTab(prev => prev-1)
+  }
   }
 
   const handleSubmitClick = () =>{
+  
    console.log("Make API Call")
   }
 
@@ -51,7 +78,7 @@ const TabForm = () => {
         className="heading" key={index}>{tab.name}</div>)}  
         </div>
         <div className="tab-body">
-          <ActiveTabComponent data={data} setData={setData}/>
+          <ActiveTabComponent data={data} setData={setData} errors={errors}/>
         </div>
         <div className="button-container">
          <div>

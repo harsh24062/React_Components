@@ -1,5 +1,5 @@
 
-const Settings = ({data,setData}) => {
+const Settings = ({data,setData,errors}) => {
   const {theme} = data
 
   const handleChange = (e) =>{
