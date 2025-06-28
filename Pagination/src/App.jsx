@@ -16,7 +16,9 @@ function App() {
   return products.length==0?<div className="App"><h1>NO PRODUCT FOUND</h1></div>:(
     <div className="App">
       <h1>Paginatiom</h1>
-      {products.map((product,index)=>(<ProductCard key={index} title={product.title} description={product.description} price={product.price} thumbnail={product.thumbnail}/>))}
+      <div className="products-container">
+       {products.map((product,index)=>(<ProductCard key={index} title={product.title} description={product.description} price={product.price} thumbnail={product.thumbnail}/>))}
+     </div>
     </div>
   )
 }

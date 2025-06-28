@@ -1,3 +1,22 @@
 .App{
     text-align: center;
 }
+
+.product-card{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.product-img{
+    width: 200px;
+    height: 200px;
+}
+
+.products-container{
+ display: flex;
+ flex-wrap: wrap;
+}
