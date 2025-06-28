@@ -9,6 +9,7 @@
     width: 300px;
     padding: 5px;
     margin: 10px;
+    border-radius: 20px;
 }
 
 .product-img{
@@ -19,4 +20,25 @@
 .products-container{
  display: flex;
  flex-wrap: wrap;
+}
+
+.pagination-container{
+    padding: 20px;
+}
+
+.page-number{
+    border: 2px solid black;
+    margin: 4px;
+    padding: 10px;
+    font-weight: 600;
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+.page-number:hover{
+    cursor: pointer;
+}
+
+.active{
+    background-color: aqua;
 }
