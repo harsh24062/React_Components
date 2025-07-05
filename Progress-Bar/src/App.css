@@ -1,0 +1,16 @@
+.App{
+    text-align:center;
+}
+
+.progress-bar-container{
+    border:1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar-outer{
+}
+
+.progress-bar-inner{
+    background-color:aqua;
+}
